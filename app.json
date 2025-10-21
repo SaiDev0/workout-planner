@@ -1,30 +1,57 @@
 {
   "expo": {
-    "name": "workout-planner",
+    "name": "Workout Planner",
     "slug": "workout-planner",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#0f172a"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.personal.workoutplanner",
+      "infoPlist": {
+        "LSApplicationQueriesSchemes": [
+          "youtube-music",
+          "vnd.youtube.music"
+        ]
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#667eea"
       },
+      "package": "com.personal.workoutplanner",
+      "permissions": [
+        "NOTIFICATIONS",
+        "VIBRATE"
+      ],
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon.png",
+          "color": "#667eea",
+          "sounds": []
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "8f7b0c75-9442-4b70-9978-f2190e11b972"
+      }
     }
   }
 }
